@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Avijit Roy-->
+    <meta charset="UTF-8">
+    <title>Factorial - Avijit Roy</title>
+
+    <script type="text/javascript">
+        function calculate() {
+            var num = prompt("Enter a number between 1 to 100 to get the Factorial", 10);
+
+            while ((isNaN(parseInt(num)) || parseInt(num) < 1 || parseInt(num) > 100) && num != null) {
+                alert("Input must be a number greater than Zero but can't greater than 100.");
+                var num = prompt("Re-Enter a number again between 1 and 100", 100);
+            }
+
+            if (num != null) {
+                var fac = 1;
+                for (var i = 1; i <= num; i++) {
+                    fac = fac * i;
+                }
+                alert("The result of " + num + "!" + " is " + fac);
+                document.getElementById("result").innerHTML = "The result of " + num + "!" + " is " + fac;
+            } else
+                document.getElementById("result").innerHTML = "You Hit Cancel! Thanks for using this tool.";
+        }
+    </script>
+</head>
+
+<body onload="calculate()">
+    <section style="text-align: center;">
+        <h1 style="text-align: center;">The Factorial result is executed using for Loop</h1>
+        <h3 style="text-align: center; color: red; border: solid 2px navy; padding: 20px; width: 75%; margin: auto;" id="result">
+    </h3>
+    <br /> <hr>
+        <pre>Solved by: Avijit Roy</pre>
+    </section>
+</body>
+
+</html>

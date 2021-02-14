@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Avijit Roy-->
+    <meta charset="UTF-8">
+    <title>FOR Loop | Sum the Numbers | Avijit Roy</title>
+
+    <script type="text/javascript">
+        function calculate() {
+            var num = prompt("Enter a number between 1 to 100 to sum", 100);
+            while ((isNaN(parseInt(num)) || parseInt(num) <= 0 || parseInt(num) > 100) && num != null) {
+                alert("Input must be a number greater than Zero but can't greater than 100.");
+                var num = prompt("Re-Enter a number again between 1 and 100", 100);
+            }
+
+            if (num != null) {
+                alert("You have entered " + num);
+                var sum = 0;
+                for (var i = 0; i <= num; i++) {
+                    sum += i;
+                }
+                alert("The SUM of Number from 1 to " + num + " is " + sum);
+                document.getElementById("result").innerHTML = sum;
+            } else
+                document.getElementById("result").innerHTML = "You Hit Cancel! Thanks for using this tool.";
+        }
+    </script>
+</head>
+
+<body onload="calculate()">
+    <section style="text-align: center;">
+        <h1 style="text-align: center;">Sum the Numbers from 1 through entry is executed using FOR Loop</h1>
+        <h3 style="text-align: center; color: red; border: solid 2px navy; padding: 20px; width: 75%; margin: auto;" id="result">
+        </h3>
+        <br /> <hr>
+        <pre>Solved by: Avijit Roy</pre>
+    </section>
+</body>
+
+</html>
